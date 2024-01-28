@@ -61,7 +61,7 @@ async function getWeather() {
                 result.innerHTML += `<li class="list-group-item"><h5>${date.toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})}</h5></li>`
                 result.innerHTML += `<li class="list-group-item"><div class="row"><div class="col-2"><strong>Weather:</strong></div><div class="col-4">${d.weather[0].description}</div></div></li>`
                 result.innerHTML += `<li class="list-group-item"><div class="row"><div class="col-2"><strong>Temperature:</strong></div><div class="col-4">${Math.round(kToF(d.main.temp))}F</div></div></li>`
-                result.innerHTML += `<li class="list-group-item"><div class="row"><div class="col-2"><strong>Wind Speed:</strong></div><div class="col-4">${d.wind.speed} mph</div></div></li>`
+                result.innerHTML += `<li class="list-group-item"><div class="row"><div class="col-2"><strong>Wind Speed:</strong></div><div class="col-4">${Math.round(d.wind.speed * 2.23694)} mph</div></div></li>`
                 result.innerHTML += '</ul>'
                 result.innerHTML += '<br>'
                 
